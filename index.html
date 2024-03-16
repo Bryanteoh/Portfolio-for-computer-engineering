@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f413ce7f72.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Achievement</a></li>
+          <li><a href="#portfolio">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class=" fas fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Welcome</p>
+        <h1>Hi, I'm <span>Bryanteoh</span><br>From DSS</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/01.png">
+        </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I'm Teoh Yu Teng, a student at Dunearn Secondary School with a strong passion for programming. Here, I'll present some of the relevant things I had done.</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Hobby</p>
+              <p class="tab-links" onclick="opentab('expereince')">Leadership</p>
+              <p class="tab-links" onclick="opentab('education')">Enrichment</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>GYM</span><br>I have three years expereince of working out</li>
+                <li><span>PROGRAMMING</span><br>I use Javascript, HTML & CSS in programming</li>
+                <li><span>SINGING</span><br>My favorite singer is Jay Chou</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="expereince">
+              <ul>
+                <li><span>STUDENT LEADERSHIP</span><br>Class Vice-Chairperson(2023)<br>Chinese Language Rep(2021)</li>
+                <li><span>LEADERSHIP MODULE</span><br>Completed 3 modules on leadership: <br>Sec 3 Leadership Camp<br>Sec 2 Leadership Camp<br>Sec 1 Leadership Workship</li>
+                <li><span>SCHOOL APPOINTMENT</span><br>CCA Leaders L1</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>EXTERNAL SCIENCE-RELATED PROGRAMME</span><br>Young Engineer Award(YEA) Applied Learning Certification<br>Youth STEM Empowerment Programme<br>Learning Journey to RP Argriculture & Innovation Centre<br>Learning Journey to iFLY Sentosa<br>Health and Food Science Competition</li>
+                <li><span>INTERNAL SCIENCE-RELATED PROGRAMME</span><br>Computational Thinking - Rocket Projectile Motion<br>Junior Environment Ambassador Workshop<br>Big Science Competition<br>Science Ambassador Programme</li>
+              </ul>
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <div class="conatiner">
+      <h1 class="sub-title">My Achievement</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-dna"></i>
+          <h2>SCIENCE & ENGINEER AWARD</h2>
+          <p>Soft Copies</p>
+          <a href="SEA.html">Learn more</a>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-book"></i>
+          <h2>ACADEMIC AWARD</h2>
+          <p>Soft Copies</p>
+          <a href="AA.html">Learn more</a>
+        </div>
+
+        <div>
+          <i class="fa-regular fa-face-smile"></i>
+          <h2>OTHERS</h2>
+          <p>Soft Copies</p>
+          <a href="OT.html">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Project</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/04.jpg">
+          <div class="layer">
+            <h3>RPS</h3>
+            <p>(Softward)</p>
+            <a href="https://bryanteoh.github.io/Bryanteoh-forfunwebsite/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/05.png">
+          <div class="layer">
+            <h3>Go Out</h3>
+            <p>(Softward)</p>
+            <a href="https://bryanteoh.github.io/go-out/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/02.jpg">
+          <div class="layer">
+            <h3>Arduino</h3>
+            <p>(Hardward)</p>
+            <a href="Hardward.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <div class="copyright">
+      <p>Copyright <i class="fa-solid fa-heart"></i> by Bryanteoh</p>
+  </div>
+  
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname) {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+
+  </script>
+</body>
+</html>
