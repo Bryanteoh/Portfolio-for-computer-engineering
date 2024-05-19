@@ -1,0 +1,71 @@
+.frontv img{
+  width: 20%;
+  height: 40vh;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+.backv img{
+  width: 20%;
+  height: 40vh;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+.topv img{
+  width: 20%;
+  height: 40vh;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+.in img{
+  width: 20%;
+  height: 40vh;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+.demo video{
+  width: 20%;
+  height: 40vh;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .topv img{
+    width: 80%;
+    height: 40vh;
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .frontv img{
+    width: 80%;
+    height: 40vh;
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .backv img{
+    width:80%;
+    height: 40vh;
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .in img{
+    width: 80%;
+    height: 40vh;
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .demo video{
+    width: 80%;
+    height: 40vh;
+    padding: 10px;
+    margin-left: 10px;
+  }
+}
